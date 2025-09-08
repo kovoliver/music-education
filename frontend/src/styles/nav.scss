@@ -1,7 +1,7 @@
 nav {
     position:sticky;
     top:0;
-    background-color:#c2baadd6;
+    background-color:#363a4cde;
     z-index:10;
 
     ul {
@@ -22,7 +22,7 @@ nav {
         height: 100%;
 
         &:hover {
-            background-color: map-get($colors, "primary-lighter");
+            background-color: map-get($colors, "secondary-darker");
         }
 
         @media screen and (max-width:map-get($sizes, "md")) {
@@ -43,7 +43,6 @@ nav {
     }
     
     @media screen and (max-width:map-get($sizes, "md")) {
-        background-color:#c2baadd6;
         height:auto;
         text-align: center;
         position:fixed;
@@ -51,7 +50,7 @@ nav {
         z-index:500;
         width: 100%!important;
         top:0;
-        display:none;
+        // display:none;
 
         ul {
             display:block!important;
@@ -69,7 +68,7 @@ nav {
 }
 
 .selected-menu {
-    background-color: map-get($colors, "primary");
+    background-color: map-get($colors, "secondary-darker");
 
     a {
         color:white;

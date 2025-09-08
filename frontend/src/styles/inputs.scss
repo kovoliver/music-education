@@ -19,6 +19,7 @@
         padding:$value;
         margin:10px 0;
         @extend %input;
+        border-radius: 5px;
     }
 
     .btn-#{$key} {

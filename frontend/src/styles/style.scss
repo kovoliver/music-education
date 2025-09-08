@@ -541,6 +541,7 @@ iframe {
     border:2px solid map-get($colors, "primary");
     overflow: hidden;
     float:left;
+    border-radius: 5px;
 }
 
 .me-img img {
@@ -576,6 +577,7 @@ footer {
     width:720px;
     aspect-ratio: 16/9;
     border:2px solid map-get($colors, "primary");
+    border-radius: 10px;
 
     @media screen and (max-width:map-get($sizes, "lg")) {
         width:480px;
@@ -584,4 +586,20 @@ footer {
     @media screen and (max-width:map-get($sizes, "md")) {
         width:360px;
     }
+}
+
+.rounded-top-right {
+    border-top-right-radius: 10px;
+}
+
+.rounded-top-left {
+    border-top-left-radius: 10px;
+}
+
+.rounded-bottom-right {
+    border-bottom-right-radius: 10px;
+}
+
+.rounded-bottom-left {
+    border-bottom-left-radius: 10px;
 }

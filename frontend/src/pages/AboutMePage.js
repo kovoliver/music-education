@@ -12,7 +12,7 @@ function AboutMePage() {
 
     return (
         <>
-            <div className="container-lg box-white p-md">
+            <div className="container-lg box-white p-md rounded-top-right rounded-top-left">
                 <h1>About Me</h1>
                 <div className="p-sm">
                     <div className="me-img">
@@ -64,7 +64,7 @@ function AboutMePage() {
                     Don't hesitate to reach out, whether you're an aspiring composer or songwriter.
                 </p>
 
-                <div className="container-lg row">
+                <div className="container-lg row rounded-top-left rounded-bottom-left rounded-top-right rounded-bottom-right">
                     <div className="col-md-4">
                         <div className="bg-primary-lighter p-sm border-primary-darker table-cell">
                             <h3>Music Theory</h3>
