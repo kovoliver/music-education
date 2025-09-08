@@ -21,7 +21,14 @@ function Nav() {
                     </ul>
                 </nav>
                 <div className="title-holder">
-                    <h1>Olivér Kovács, Composer and Music Educator</h1>
+                    <div className="text-center">
+                        <h1>
+                            Olivér Kovács
+                        </h1>
+                        <h2>
+                            Composer, Music Educator & Content Creator
+                        </h2>
+                    </div>
                 </div>
             </header>
 

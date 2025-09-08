@@ -1,7 +1,7 @@
 nav {
     position:sticky;
     top:0;
-    background-color:#26b9a5ba;
+    background-color:#c2baadd6;
     z-index:10;
 
     ul {
@@ -43,6 +43,7 @@ nav {
     }
     
     @media screen and (max-width:map-get($sizes, "md")) {
+        background-color:#c2baadd6;
         height:auto;
         text-align: center;
         position:fixed;
@@ -50,6 +51,7 @@ nav {
         z-index:500;
         width: 100%!important;
         top:0;
+        display:none;
 
         ul {
             display:block!important;
@@ -58,6 +60,10 @@ nav {
         li {
             width:100%;
             justify-content: center;
+        }
+
+        a {
+            color:white;
         }
     }
 }
@@ -90,9 +96,33 @@ header {
 }
 
 .title-holder h1 {
-    color:map-get($colors, "secondary");
+    color:map-get($colors, "white");
     text-shadow: 1px 1px 5px map-get($colors, "dark-grey");
-    font-size: 60px;
+    font-size: 70px;
      -webkit-text-stroke: 0.04em map-get($colors, "primary");
     paint-order: stroke fill;
+
+    @media screen and (max-width:map-get($sizes, "lg")) {
+        font-size: 50px;
+    }
+
+    @media screen and (max-width:map-get($sizes, "md")) {
+        font-size: 30px;
+    }
+}
+
+.title-holder h2 {
+    color:map-get($colors, "secondary");
+    text-shadow: 1px 1px 5px map-get($colors, "dark-grey");
+    font-size: 50px;
+     -webkit-text-stroke: 0.04em map-get($colors, "primary");
+    paint-order: stroke fill;
+
+    @media screen and (max-width:map-get($sizes, "lg")) {
+        font-size: 35px;
+    }
+
+    @media screen and (max-width:map-get($sizes, "md")) {
+        font-size: 20px;
+    }
 }

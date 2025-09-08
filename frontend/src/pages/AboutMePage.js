@@ -1,11 +1,18 @@
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import YouTubeCarousel from "../components/YouTubeCarousel";
 
 function AboutMePage() {
+    const videos = [
+        {id:"U4cVTbz-QHg", title:"How to Compose Music from Scratch"},
+        {id:"B7VFOznWgr8", title:"Composing Tutorial: How to Create a Fantasy Main Theme"},
+        {id:"f8eVG5fmEqc", title:"Orchestration Essentials: Woodwinds"},
+    ];
+
     return (
         <>
-            <div className="container-lg box-light-grey p-md">
+            <div className="container-lg box-white p-md">
                 <h1>About Me</h1>
                 <div className="p-sm">
                     <div className="me-img">
@@ -41,6 +48,10 @@ function AboutMePage() {
                 </p>
 
                 <h2>Some of my YouTube videos</h2>
+
+                <YouTubeCarousel
+                    videos={videos}
+                />
             </div>
 
             <div className="box-primary pt-md pb-xl text-center">

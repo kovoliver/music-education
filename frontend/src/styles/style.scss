@@ -14,6 +14,7 @@ body {
     min-height: 100vh;
     position:relative;
     padding-bottom: 100px!important;
+    background-color: map-get($colors, "light-grey");
 }
 
 h1,
@@ -563,4 +564,24 @@ footer {
     position:absolute;
     bottom:0;
     width:100%;
+}
+
+.yt-video-holder {
+    max-width:800px;
+    aspect-ratio: 16/9;
+    margin:10px auto;
+}
+
+.yt-video {
+    width:720px;
+    aspect-ratio: 16/9;
+    border:2px solid map-get($colors, "primary");
+
+    @media screen and (max-width:map-get($sizes, "lg")) {
+        width:480px;
+    }
+
+    @media screen and (max-width:map-get($sizes, "md")) {
+        width:360px;
+    }
 }

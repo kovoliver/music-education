@@ -171,7 +171,7 @@ p {
     }
 
     @media screen and (max-width: map-get($sizes, "sm")) {
-        width: map-get($sizes, "xs");
+        width: 100%;
     }
 
     @media screen and (max-width: map-get($sizes, "xs")) {
@@ -193,7 +193,7 @@ p {
     }
 
     @media screen and (max-width: map-get($sizes, "sm")) {
-        width: map-get($sizes, "xs");
+        width: 100%;
     }
 
     @media screen and (max-width: map-get($sizes, "xs")) {
@@ -211,7 +211,7 @@ p {
     }
 
     @media screen and (max-width: map-get($sizes, "sm")) {
-        width: map-get($sizes, "xs");
+        width: 100%;
     }
 
     @media screen and (max-width: map-get($sizes, "xs")) {
