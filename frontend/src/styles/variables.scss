@@ -1,0 +1,77 @@
+$sizes:(
+    "xs":360px,
+    "sm":540px,
+    "md":720px,
+    "lg":1080px,
+    "xl":1280px,
+    "xxl":1400px
+);
+
+$colors: (
+    "secondary": #2bd1ba,
+    "secondary-lighter": #30e8d0,
+    "secondary-darker": #26b9a5,
+    "primary": #0b3d4e,
+    "primary-lighter": #10576e,
+    "primary-darker": #092e3b,
+    "light-grey": #f5f5f5,
+    "mid-grey": #828282,
+    "dark-grey": #424242,
+    "black": #212121,
+    "white": #ffffff,
+    "success": #0f9c30,
+    "error": #FF3D3D,
+    "warning": #ffb300
+);
+
+$spaces:(
+    "xs":3px,
+    "sm":5px,
+    "md":10px,
+    "lg":15px,
+    "xl":20px
+);
+
+$fonts: (
+  "primary": "Arial, sans-serif",
+  "secondary": "Georgia, serif"
+);
+
+$font-sizes: (
+  "xs": 12px,
+  "sm": 14px,
+  "md": 16px,
+  "lg": 20px,
+  "xl": 24px,
+  "xxl": 32px
+);
+
+$font-weights: (
+  "light": 300,
+  "normal": 400,
+  "bold": 700
+);
+
+$shadows: (
+  "light": 0 1px 3px rgba(0, 0, 0, 0.12),
+  "medium": 0 4px 6px rgba(0, 0, 0, 0.16),
+  "dark": 0 10px 20px rgba(0, 0, 0, 0.19)
+);
+
+$borders: (
+  "thin": 1px solid,
+  "thick": 2px solid
+);
+
+$displays:block, inline, inline-block, grid, flex, none, table, table-cell;
+$textAligns:left, right, center, justify;
+$contentPos:start, end, center, space-between, space-around, space-evenly;
+$alignItems:start, end, center;
+$flexDirections:row, row-reverse, column, column-reverse;
+$flexWraps:wrap, nowrap, wrap-reverse;
+$positions:static, relative, absolute, fixed, sticky;
+
+$cursors: pointer, default, wait, text, move, not-allowed, crosshair, progress, 
+e-resize, ne-resize, nw-resize, n-resize, se-resize, sw-resize, s-resize, w-resize, 
+ew-resize, ns-resize, nesw-resize, nwse-resize, cell, vertical-text, alias, 
+context-menu, help, no-drop, grab, grabbing;

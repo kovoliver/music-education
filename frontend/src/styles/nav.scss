@@ -1,0 +1,98 @@
+nav {
+    position:sticky;
+    top:0;
+    background-color:#26b9a5ba;
+    z-index:10;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height:70px;
+
+        @media screen and (max-width:map-get($sizes, "md")) {
+            height:100%;
+        }
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        &:hover {
+            background-color: map-get($colors, "primary-lighter");
+        }
+
+        @media screen and (max-width:map-get($sizes, "md")) {
+            height:50px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        padding: 0 20px;
+        color:map-get($colors, "white");
+        font-size:18px;
+        font-weight: 600;
+
+        @media screen and (max-width:map-get($sizes, "md")) {
+            color:map-get($colors, "secondary");
+        }
+    }
+    
+    @media screen and (max-width:map-get($sizes, "md")) {
+        height:auto;
+        text-align: center;
+        position:fixed;
+        height:100%;
+        z-index:500;
+        width: 100%!important;
+        top:0;
+
+        ul {
+            display:block!important;
+        }
+
+        li {
+            width:100%;
+            justify-content: center;
+        }
+    }
+}
+
+.selected-menu {
+    background-color: map-get($colors, "primary");
+
+    a {
+        color:white;
+    }
+}
+
+header {
+    height: 600px;
+    background-image: url("../images/epic_adventure_music.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+.title-holder {
+    height: 100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+}
+
+.title-holder h1 {
+    color:map-get($colors, "secondary");
+    text-shadow: 1px 1px 5px map-get($colors, "dark-grey");
+    font-size: 60px;
+     -webkit-text-stroke: 0.04em map-get($colors, "primary");
+    paint-order: stroke fill;
+}

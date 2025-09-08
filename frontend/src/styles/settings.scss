@@ -1,0 +1,241 @@
+@include create-spacings("p", padding, $spaces);
+@include create-spacings("pl", padding-left, $spaces);
+@include create-spacings("pr", padding-right, $spaces);
+@include create-spacings("pt", padding-top, $spaces);
+@include create-spacings("pb", padding-bottom, $spaces);
+
+@include create-spacings("m", margin, $spaces);
+@include create-spacings("ml", margin-left, $spaces);
+@include create-spacings("mr", margin-right, $spaces);
+@include create-spacings("mt", margin-top, $spaces);
+@include create-spacings("mb", margin-bottom, $spaces);
+@include create-spacings("l", left, $spaces);
+@include create-spacings("r", right, $spaces);
+
+@include map-classes("color", color, $colors);
+@include map-classes("bg", background-color, $colors);
+@include map-classes("ws", width, $sizes);
+@include map-classes("mws", max-width, $sizes);
+
+@for $i from 1 through 9 {
+    $transparency: $i / 10; // Convert to decimal
+    @include map-background-classes('bgt', $colors, $transparency);
+}
+
+@include list-classes("d", display, $displays);
+@include list-classes("text", text-align, $textAligns);
+@include list-classes("cursor", cursor, $cursors);
+@include list-classes("position", position, $positions);
+
+@include loop-classes("w", width, 5, 1000, 5, px);
+@include loop-classes("h", height, 5, 1000, 5, px);
+
+@include loop-classes("mw", max-width, 5, 1000, 5, px);
+@include loop-classes("mh", max-height, 5, 1000, 5, px);
+@include loop-classes("wp", width, 5, 100, 5, '%');
+@include loop-classes("hp", height, 5, 100, 5, '%');
+
+@include loop-classes("minw", min-width, 5, 500, 5, px);
+@include loop-classes("minh", min-height, 5, 1000, 5, px);
+
+@include loop-classes("left", left, -1000, 1000, 5, px);
+@include loop-classes("right", right, -1000, 1000, 5, px);
+@include loop-classes("top", top, -1000, 1000, 5, px);
+@include loop-classes("bottom", bottom, -1000, 1000, 5, px);
+
+@include loop-classes("z-index", z-index, 0, 5000, 10, '');
+
+@include loop-classes("minwp", min-width, 5, 100, 5, "%");
+@include loop-classes("maxwp", max-width, 5, 100, 5, "%");
+@include loop-classes("font", font-size, 8, 50, 2, px);
+
+@include loop-classes("rounded", border-radius, 5, 100, 5, px);
+
+@include loop-classes("mtpx", margin-top, 0, 500, 10, px);
+
+p {
+    padding:5px 0;
+}
+
+.transparent-black {
+    background-color:rgba(0,0,0,0.7);
+}
+
+.noselect {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Standard syntax */
+}
+
+.margin-auto {
+    margin:auto;
+}
+
+.img-holder {
+    overflow: hidden;
+    height:200px;
+}
+
+.img-holder img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.shadow {
+    box-shadow: 0px 0px 4px map-get($colors, "dark-grey");
+}
+
+@each $key, $value in $colors {
+    @for $i from 1 through 5 {
+        @if($i == 1) {
+            .border-#{$key} {
+                border:1px solid #{$value}!important;
+            }
+        } @else {
+            .border-#{$key}-#{$i} {
+                border:#{$i}px solid #{$value}!important;
+            }
+        }
+    }
+}
+
+@for $i from 5 through 50 {
+    .rounded-right-#{$i} {
+        border-radius: 0 #{$i}px #{$i}px 0;
+    }
+
+    .rounded-left-#{$i} {
+        border-radius: #{$i}px 0 0 #{$i}px;
+    }
+}
+
+@each $key, $value in $colors {
+    .box-#{$key} {
+        background-color:$value;
+        border:1px solid darken($value, 10%);
+    }
+}
+
+.m-auto {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.container-xxl {
+    width: map-get($sizes, "xxl");
+    margin:auto;
+    overflow: hidden;
+
+    @media screen and (max-width: map-get($sizes, "xxl")) {
+        width: map-get($sizes, "xl");
+    }
+
+    @media screen and (max-width: map-get($sizes, "xl")) {
+        width: map-get($sizes, "lg");
+    }
+
+    @media screen and (max-width: map-get($sizes, "lg")) {
+        width: map-get($sizes, "md");
+    }
+
+    @media screen and (max-width: map-get($sizes, "md")) {
+        width: map-get($sizes, "sm");
+    }
+
+    @media screen and (max-width: map-get($sizes, "sm")) {
+        width: map-get($sizes, "xs");
+    }
+
+    @media screen and (max-width: map-get($sizes, "xs")) {
+        width: 100%;
+    }
+}
+
+.container-xl {
+    width: map-get($sizes, "xl");
+    margin:auto;
+    overflow: hidden;
+
+    @media screen and (max-width: map-get($sizes, "xl")) {
+        width: map-get($sizes, "lg");
+    }
+
+    @media screen and (max-width: map-get($sizes, "lg")) {
+        width: map-get($sizes, "md");
+    }
+
+    @media screen and (max-width: map-get($sizes, "md")) {
+        width: map-get($sizes, "sm");
+    }
+
+    @media screen and (max-width: map-get($sizes, "sm")) {
+        width: map-get($sizes, "xs");
+    }
+
+    @media screen and (max-width: map-get($sizes, "xs")) {
+        width: 100%;
+    }
+}
+
+.container-lg {
+    width: map-get($sizes, "lg");
+    margin:auto;
+    overflow: hidden;
+
+    @media screen and (max-width: map-get($sizes, "lg")) {
+        width: map-get($sizes, "md");
+    }
+
+    @media screen and (max-width: map-get($sizes, "md")) {
+        width: map-get($sizes, "sm");
+    }
+
+    @media screen and (max-width: map-get($sizes, "sm")) {
+        width: map-get($sizes, "xs");
+    }
+
+    @media screen and (max-width: map-get($sizes, "xs")) {
+        width: 100%;
+    }
+}
+
+.container-md {
+    width: map-get($sizes, "md");
+    margin:auto;
+    overflow: hidden;
+
+    @media screen and (max-width: map-get($sizes, "md")) {
+        width: map-get($sizes, "sm");
+    }
+
+    @media screen and (max-width: map-get($sizes, "sm")) {
+        width: map-get($sizes, "xs");
+    }
+
+    @media screen and (max-width: map-get($sizes, "xs")) {
+        width: 100%;
+    }
+}
+
+.container-sm {
+    width: map-get($sizes, "sm");
+    margin:auto;
+
+    @media screen and (max-width: map-get($sizes, "sm")) {
+        width: map-get($sizes, "xs");
+    }
+
+    @media screen and (max-width: map-get($sizes, "xs")) {
+        width: 100%;
+    }
+}
+
+.table-border {
+    margin:-1px -1px 0 0;
+}
+
+.bold-text {
+    font-weight: bold;
+}

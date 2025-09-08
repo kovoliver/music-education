@@ -1,0 +1,44 @@
+@use "sass:color";
+
+.table {
+    border-collapse: collapse;
+}
+
+.table td, .table th {
+    padding:4px;
+}
+
+@each $key, $value in $colors {
+    $lightness: color.lightness($value);
+    $fontColor:black;
+    @debug $lightness;
+
+    @if $lightness < 50% {
+        $fontColor:white;
+    }
+    
+    .table-#{$key} {
+        border-collapse: collapse;
+        border:1px solid $value;
+        background-color: white;
+
+        thead {
+            background-color:darken($value, 10%);
+            color:$fontColor;
+        }
+
+        td, th {
+            border:1px solid $value;
+            padding:4px;
+        }
+    }
+
+    .table-striped-#{$key} {
+        background-color: white;
+        
+        tr:nth-child(2n) {
+            background-color: $value;
+            color:$fontColor;
+        }
+    }
+}

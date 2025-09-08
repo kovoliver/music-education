@@ -1,0 +1,152 @@
+%input:focus {
+    outline:0;
+}
+
+%input {
+    @media screen and (max-width:map-get($sizes, "sm")) {
+        font-size:12px!important;
+    }
+}
+
+@media screen and (max-width:map-get($sizes, "sm")) {
+    input[type=date] {
+        font-size:12px!important;
+    }
+}
+
+@each $key, $value in $spaces {
+    .input-#{$key} {
+        padding:$value;
+        margin:10px 0;
+        @extend %input;
+    }
+
+    .btn-#{$key} {
+        padding:$value;
+        margin:10px 0;
+        cursor: pointer;
+        @extend %input;
+    }
+}
+
+.input-primary {
+    border:2px solid darken(map-get($colors, "primary"), 10%);
+
+    &:focus {
+        border:2px solid map-get($colors, "secondary-lighter");
+    }
+}
+
+.input-secondary {
+    border:2px solid darken(map-get($colors, "secondary-darker"), 10%);
+
+    &:focus {
+        border:2px solid map-get($colors, "primary");
+    }
+}
+
+.btn-wide-secondary {
+    background-color:map-get($colors, "secondary");
+    color:white;
+    width:150px;
+    padding:10px 0;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.btn-wide-secondary:focus {
+    outline:0;
+}
+
+.btn-primary {
+    background-color:map-get($colors, "primary");
+    border:2px solid map-get($colors, "primary-darker");
+    color:white;
+    cursor:pointer;
+
+    &:active {
+        background-color:map-get($colors, "secondary");
+        border:2px solid map-get($colors, "secondary-darker");
+    }
+}
+
+.btn-secondary {
+    background-color:map-get($colors, "secondary");
+    border:2px solid map-get($colors, "secondary-darker");
+    color:white;
+    cursor:pointer;
+
+    &:active {
+        background-color:map-get($colors, "primary");
+        border:2px solid map-get($colors, "primary-darker");
+    }
+}
+
+.btn-warning {
+    background-color:map-get($colors, "warning");
+    border:2px solid darken(map-get($colors, "warning"), 20%);
+    color:white;
+    cursor:pointer;
+
+    &:active {
+        background-color:map-get($colors, "primary");
+        border:2px solid map-get($colors, "primary-darker");
+    }
+}
+
+.btn-error {
+    background-color:map-get($colors, "error");
+    border:2px solid darken(map-get($colors, "error"), 10%);
+    color:white;
+    cursor:pointer;
+
+    &:active {
+        background-color:map-get($colors, "primary");
+        border:2px solid map-get($colors, "primary-darker");
+    }
+}
+
+.btn-disabled {
+    background-color:map-get($colors, "mid-grey");
+    border:2px solid darken(map-get($colors, "mid-grey"), 10%);
+    color:white;
+    cursor:pointer;
+
+    &:active {
+        background-color:map-get($colors, "dark-grey");
+        border:2px solid map-get($colors, "dark-grey");
+    }
+}
+
+@each $key, $value in $colors {
+    .btn-#{$key} {
+        background-color:$value;
+        border:2px solid darken($value, 10%);
+        color:white;
+        cursor:pointer;
+
+        &:active {
+            background-color:darken($value, 10%);
+            border:2px solid darken($value, 20%);
+        }
+    }
+}
+
+.input-error {
+    border:2px solid map-get($colors, "error")!important;
+    border-radius: 3px;
+}
+
+.center-input {
+    display:block;
+    margin:10px auto;
+}
+
+.btn-fix-md {
+    width:80px;
+    height:60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

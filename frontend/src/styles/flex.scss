@@ -1,0 +1,10 @@
+@include list-classes("ac", align-content, $contentPos);
+@include list-classes("jc", justify-content, $contentPos);
+@include list-classes("ai", align-items, $alignItems);
+@include list-classes("f-dir", flex-direction, $flexDirections);
+@include list-classes("f-wrap", flex-wrap, $flexWraps);
+@include create-spacings("gap", gap, $spaces);
+
+.flex {
+    display:flex;
+}
