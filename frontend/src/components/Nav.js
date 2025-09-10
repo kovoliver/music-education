@@ -6,14 +6,14 @@ function Nav() {
 
     return (
         <>
-            <header>
+            <header style={{height:location.pathname != "/" ? "350px" : ""}}>
                 <nav>
                     <ul>
                         <li className={selectMenu(location.pathname, "/")}>
                             <Link to="/">About me</Link>
                         </li>
-                        <li className={selectMenu(location.pathname, "/online-lessons")}>
-                            <Link to="/online-lessons">Online Lessons</Link>
+                        <li className={selectMenu(location.pathname, "/mentorship-program")}>
+                            <Link to="/mentorship-program">Mentorship Program</Link>
                         </li>
                         <li className={selectMenu(location.pathname, "/contact")}>
                             <Link to="/contact">Contact</Link>

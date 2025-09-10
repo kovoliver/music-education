@@ -22,8 +22,8 @@ const YouTubeCarousel = ({ videos }) => {
     return (
         <div className="flex jc-space-between ai-center yt-video-holder">
             <FontAwesomeIcon
-                icon={faArrowLeft}
-                className="cursor-pointer color-primary font-xxl p-md"
+                icon="fa-solid fa-square-caret-left"
+                className="cursor-pointer color-primary font-26 p-md"
                 onClick={handlePrev}
             />
             <div className="flex f-dir-column ai-center m-auto">
@@ -39,10 +39,12 @@ const YouTubeCarousel = ({ videos }) => {
                         allowFullScreen
                     ></iframe>
                 </div>
+
+                <h4>{currentIndex+1}/{videos.length}</h4>
             </div>
             <FontAwesomeIcon
-                icon={faArrowRight}
-                className="cursor-pointer color-primary font-xxl p-md"
+                icon="fa-solid fa-square-caret-right"
+                className="cursor-pointer color-primary font-26 p-md"
                 onClick={handleNext}
             />
         </div>
