@@ -603,3 +603,15 @@ footer {
 .rounded-bottom-left {
     border-bottom-left-radius: 10px;
 }
+
+.d-none-mobile {
+    @media screen and (max-width:map-get($sizes, "md")) {
+        display:none!important;
+    }
+}
+
+.not-rouded-mobile {
+    @media screen and (max-width:map-get($sizes, "md")) {
+        border-radius: 0!important;
+    }
+}

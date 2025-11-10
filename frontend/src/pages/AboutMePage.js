@@ -47,7 +47,7 @@ function AboutMePage() {
                     that make learning more effective and engaging.
                 </p>
 
-                <h2>Some of my YouTube videos</h2>
+                <h2 className="d-none-mobile">Some of my YouTube videos</h2>
 
                 <YouTubeCarousel
                     videos={videos}

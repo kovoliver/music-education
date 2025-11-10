@@ -67,6 +67,29 @@ nav {
     }
 }
 
+.nav .open {
+    display: block!important;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index:1000;
+    background-color:map-get($colors, "primary");
+    border-radius: 3px;
+
+    @media screen and (max-width:map-get($sizes, "md")) {
+        display: block;
+    }
+}
+
 .selected-menu {
     background-color: map-get($colors, "secondary-darker");
 
@@ -84,7 +107,11 @@ header {
     position: relative;
 
     @media screen and (max-width:map-get($sizes, "lg")) {
-        height: 300px;
+        height: 300px!important;
+    }
+
+    @media screen and (max-width:map-get($sizes, "md")) {
+        height: 200px!important;
     }
 }
 

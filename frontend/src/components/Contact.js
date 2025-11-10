@@ -57,7 +57,7 @@ function Contact() {
     return (
         <div className="text-center mt-lg row">
             {/* bal oldal - social */}
-            <div className="box-primary-lighter color-secondary p-sm col-md-6 rounded-top-left rounded-bottom-left">
+            <div className="box-primary-lighter color-secondary p-sm col-md-6 rounded-top-left rounded-bottom-left not-rouded-mobile">
                 <h2 className="color-secondary">Social Media</h2>
                 <p>
                     <a className="color-secondary" target="_blank" rel="noreferrer" href="https://youtube.com/@ComposersCompassYT">
@@ -80,7 +80,7 @@ function Contact() {
             </div>
 
             {/* jobb oldal - form */}
-            <div className="box-secondary color-white p-sm col-md-6 rounded-top-right rounded-bottom-right">
+            <div className="box-secondary color-white p-sm col-md-6 rounded-top-right rounded-bottom-right not-rouded-mobile">
                 <h2 className="color-primary-lighter">Contact</h2>
                 {status && (
                     <p className="color-error" style={{ fontWeight: "bold" }}>

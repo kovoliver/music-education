@@ -20,7 +20,7 @@ const YouTubeCarousel = ({ videos }) => {
     const { id, title } = videos[currentIndex];
 
     return (
-        <div className="flex jc-space-between ai-center yt-video-holder">
+        <div className="flex jc-space-between ai-center yt-video-holder d-none-mobile">
             <FontAwesomeIcon
                 icon="fa-solid fa-square-caret-left"
                 className="cursor-pointer color-primary font-26 p-md"
