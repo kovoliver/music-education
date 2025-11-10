@@ -31,13 +31,23 @@ function Contact() {
         }
 
         try {
-            const response = await fetch("sendmail.php", {
+            const response = await fetch("https://oliverkovacsmentor.eu/email.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
 
             const result = await response.json();
+
+            if (result) {
+                setFormData({
+                    name: "",
+                    email: "",
+                    subject: "",
+                    message: "",
+                });
+            }
+
             setStatus(result);
         } catch (error) {
             setStatus({ success: false, message: "Network error." });
@@ -73,7 +83,7 @@ function Contact() {
             <div className="box-secondary color-white p-sm col-md-6 rounded-top-right rounded-bottom-right">
                 <h2 className="color-primary-lighter">Contact</h2>
                 {status && (
-                    <p className="color-error" style={{fontWeight:"bold"}}>
+                    <p className="color-error" style={{ fontWeight: "bold" }}>
                         {status.message}
                     </p>
                 )}
